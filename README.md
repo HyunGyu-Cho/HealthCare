@@ -56,6 +56,7 @@ HealthCare는 Java로 개발된 Android 애플리케이션입니다. 사용자�
 ## 📂 프로젝트 구조
 
 - **LoginActivity.java**: 로그인 화면의 로직과 동작을 관리합니다.
+- **SignUpActivity.java**: 회원가입창으로, 사용자의 정보를 입력받아 데이터베이스에 저장합니다.
 - **ExerciseRoutineActivity.java**: 오늘의 운동 루틴을 보여줍니다.
 - **RecordProgressActivity.java**: 운동 진행 기록을 확인할 수 있습니다.
 - **CustomRoutineActivity.java**: 사용자 정의 운동 루틴을 생성할 수 있습니다.
