@@ -5,10 +5,19 @@ HealthCare는 Java로 개발된 Android 애플리케이션입니다. 사용자�
 
 ---
 
+
+## 🛠️ 개발 환경
+- **플랫폼**: Android (Native)
+- **언어**: Java
+- **IDE**: Android Studio
+
+---
+
+
 ## 🛠️ 주요 기능
 ### 1. **로그인 및 회원가입**
 - 사용자는 ID와 비밀번호를 입력하여 로그인할 수 있습니다.
-- 로그인 성공 시 "오늘의 운동 루틴" 화면으로 이동합니다.
+- 로그인 성공 시 "ExerciseRoutineActivity" 화면으로 이동합니다.
 
 ### 2. **오늘의 운동 루틴**
 - 사용자의 이름과 현재 날짜를 표시합니다.
@@ -41,12 +50,6 @@ HealthCare는 Java로 개발된 Android 애플리케이션입니다. 사용자�
     - 바벨로우 8개 x 4세트
     ```
 
----
-
-## 🛠️ 개발 환경
-- **플랫폼**: Android (Native)
-- **언어**: Java
-- **IDE**: Android Studio
 
 ---
 
