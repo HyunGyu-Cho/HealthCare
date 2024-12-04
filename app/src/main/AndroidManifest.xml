@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="kr.co.softcampus.healthcare">
+
+    <!-- 인터넷 권한 추가 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:label="HealthCare"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+
+        <!-- 로그인 화면 -->
+        <activity
+            android:name="kr.co.softcampus.healthcare.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 오늘의 운동 루틴 -->
+        <activity android:name="kr.co.softcampus.healthcare.ExerciseRoutineActivity" />
+
+        <!-- 운동 진행 여부 기록 -->
+        <activity android:name="kr.co.softcampus.healthcare.RecordProgressActivity" />
+
+        <!-- 나만의 운동 루틴 -->
+        <activity android:name="kr.co.softcampus.healthcare.CustomRoutineActivity" />
+
+        <!-- 추천 운동 루틴 -->
+        <activity android:name="kr.co.softcampus.healthcare.RecommendationActivity" />
+
+        <!-- 회원가입 화면 추가 -->
+        <activity android:name="kr.co.softcampus.healthcare.SignUpActivity" />
+
+    </application>
+</manifest>

@@ -1,0 +1,108 @@
+<모바일 프로그래밍 앱개발>: 운동 루틴 생성 및 관리 App
+<목표 설정>
+#목적: 사용자가 운동 루틴을 쉽게 생성하고 관리할 수 있도록 돕는 것.
+#핵심 기능:
+-사용자가 운동 루틴 입력 및 생성할 수 있게 합니다.
+-사전 정의된 운동 루틴을 제공합니다.
+-주간 운동 계획표(캘린더) 관리 기능을 제공합니다.
+-운동 완료 여부 기록 및 요약.
+<앱의 구조 설계>
+#MainActivity
+-오늘의 운동 루틴 표시.
+-진행 상황 및 달성률 요약.
+#운동 루틴 생성 화면
+-운동 항목(스쿼트, 푸쉬업 등), 세트, 횟수 추가.
+-운동 루틴 이름 설정 및 저장.
+#운동 루틴 목록 화면
+-사용자 정의 루틴 및 사전 정의된 루틴 목록.
+-선택한 루틴 편집/삭제.
+#운동 계획표 화면
+-캘린더 UI에 주간 운동 루틴 배치.
+-각 날짜별로 완료 여부 표시.
+#운동 진행 여부 체크 화면
+-선택한 운동 루틴에 따라 진행 체크(체크리스트 또는 타이머).
+#통계 화면
+-주간/월간 진행 상황 요약.
+-완료한 루틴 수, 누적 운동 시간 등.
+
+<구체적 기능>
+1) 운동 루틴 관리
+-루틴 생성/수정/삭제 기능
+-운동 이름, 세트, 횟수 등의 입력.
+-저장된 루틴을 수정/삭제 가능.
+-사전 정의된 루틴 제공
+-기본 제공 운동 루틴(예: 상체, 하체, 전신 루틴).
+2) 주간 운동 계획표
+-캘린더 UI
+-날짜별 운동 계획 추가.
+-완료 여부를 체크하고 상태 업데이트.
+3) 진행 상황 기록
+-운동 체크리스트
+-운동 수행 중 체크박스 형태로 진행 상황 표시.
+-알림 기능
+-사용자 설정 시간에 운동 알림 제공.
+4) 통계 및 요약
+-운동 성과 시각화
+-진행률, 달성률, 누적 운동 시간 등 그래프로 표시.
+-목표 설정
+-매일 또는 주간 목표 설정 및 성과 비교.
+5) 데이터 저장
+-SQLite로 운동 데이터 저장.
+4. 기술 스택
+프로그래밍 언어
+Android Native: Kotlin 또는 Java.
+크로스 플랫폼: Flutter, React Native.
+UI 설계
+Android Native UI Components
+RecyclerView: 루틴 목록 표시.
+CalendarView: 주간 운동 계획.
+ProgressBar: 진행 상황 표시.
+Flutter/React Native 위젯
+ListView/FlatList: 루틴 목록.
+Calendar 플러그인: 캘린더 기능.
+데이터 저장
+로컬 데이터베이스
+SQLite 또는 Room Library(Android).
+SharedPreferences: 간단한 설정 데이터 저장.
+클라우드(선택 사항)
+Firebase Realtime Database 또는 Firestore.
+Google Cloud Storage: 사용자의 설정 백업.
+외부 라이브러리
+UI: Material Design Components(Android), Flutter UI 패키지.
+그래프/차트: MPAndroidChart(Android), charts_flutter(Flutter).
+캘린더: Android CalendarView, table_calendar(Flutter).
+5. 앱 개발 프로세스
+1) 설계
+와이어프레임 또는 목업 도구(Figma, Adobe XD)로 앱 화면 설계.
+데이터베이스 스키마 설계(운동 루틴, 날짜별 진행 상황 등).
+2) 개발
+기본 화면 생성: 홈 화면, 루틴 생성 화면, 계획표 화면.
+데이터베이스 연결: 운동 루틴 추가/수정/삭제 기능 구현.
+캘린더 통합: 주간 운동 계획표 관리.
+알림 기능 추가: 일정에 따라 알림 전송.
+통계 화면 개발: 주간/월간 진행 상황을 그래프로 표시.
+3) 테스트
+앱 동작 및 데이터 저장 테스트.
+다양한 디바이스에서 UI 및 기능 검증.
+4) 배포
+Google Play Store에 업로드.
+사용자 피드백을 받아 업데이트.
+6. 데이터베이스 구조 예시
+Table: Routine
+- id: Primary Key
+- name: String (루틴 이름)
+- exercises: String (JSON으로 운동 항목, 세트, 횟수 저장)
+Table: Schedule
+- id: Primary Key
+- date: Date (운동 날짜)
+- routine_id: Foreign Key (루틴 ID)
+- completed: Boolean (완료 여부)
+Table: Progress
+- id: Primary Key
+- date: Date
+- routine_id: Foreign Key
+- progress: Integer (진행률, %)
+7. 추가 아이디어
+-다크 모드 지원
+-음성 가이드: "3초 후 푸쉬업 시작" 같은 알림.
+-소셜 기능: 친구와 운동 기록 공유.

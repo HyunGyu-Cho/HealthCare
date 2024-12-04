@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- 운동 부위 표시 -->
+    <TextView
+        android:id="@+id/exercisePartTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="운동 부위: "
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- 운동 루틴 리스트 -->
+    <LinearLayout
+        android:id="@+id/routineListLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical" />
+
+    <!-- 저장 버튼 -->
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="운동 기록 저장"
+        android:layout_marginTop="8dp" />
+</LinearLayout>
