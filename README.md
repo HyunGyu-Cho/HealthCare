@@ -60,12 +60,6 @@ HealthCare는 Java로 개발된 Android 애플리케이션입니다. 사용자�
 - **RecordProgressActivity.java**: 운동 진행 기록을 확인할 수 있습니다.
 - **CustomRoutineActivity.java**: 사용자 정의 운동 루틴을 생성할 수 있습니다.
 - **RecommendationActivity.java**: 추천 운동 루틴을 제공합니다.
-- **layout**: 각 액티비티의 UI 디자인을 정의하는 XML 파일들입니다.
-- **AndroidManifest.xml**: 애플리케이션의 구성 정보를 포함하며, 모든 액티비티를 선언합니다.
-- **build.gradle**: 프로젝트의 Gradle 설정 파일입니다.
-- **settings.gradle**: 프로젝트의 구성 정보를 정의합니다.
-
-
 
 ---
 
